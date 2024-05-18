@@ -58,8 +58,6 @@ func main() {
 	case <-done:
 
 	case err := <-errCh:
-		app.Client.DeleteAssistant(context.Background(), app.AssistantID)
-		app.Client.DeleteFile(context.Background(), app.FileID)
 		log.Fatal(err)
 	}
 }
